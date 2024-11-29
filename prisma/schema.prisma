@@ -9,9 +9,9 @@ datasource db {
 
 model Product {
   id          Int      @id @default(autoincrement())
+  slug        String   @unique
   name        String   @unique
   description String
-  slug        String   @unique
   price       Float
   images      String[]
   createdAt   DateTime @default(now()) @map("created_at")
