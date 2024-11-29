@@ -44,7 +44,7 @@ export const products: IProductPart[] = [
 	{
 		name: 'Cappuccino',
 		images: [
-			'/uploads/images/products/capuccino.png',
+			'/uploads/images/products/cappuccino.png',
 		],
 	},
 ];
