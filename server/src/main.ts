@@ -13,7 +13,7 @@ async function bootstrap(): Promise<void> {
   app.enableShutdownHooks()
 
   await app.listen(PORT, (): void => {
-    Logger.log(`http://localhost:${PORT}`, `Server start on host`);
+    Logger.log(`http://localhost:${PORT}`, `Server starts on host`);
   });
 }
 

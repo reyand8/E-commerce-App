@@ -2,10 +2,6 @@ import { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
     reactStrictMode: true,
-    swcMinify: true,
-    experimental: {
-        esmExternals: false,
-    },
     env: {
         REACT_APP_SERVER_URL: process.env.REACT_APP_SERVER_URL,
     },
@@ -23,7 +19,7 @@ const nextConfig: NextConfig = {
         return [
             {
                 source: '/uploads/:path*',
-                destination: 'http://localhost:5000/uploads/:path*',
+                destination: 'http://localhost:5001/uploads/:path*',
             },
         ];
     },
