@@ -12,12 +12,20 @@ model Product {
   slug        String   @unique
   name        String   @unique
   description String
+  ingredients String
   price       Float
   images      String[]
   createdAt   DateTime @default(now()) @map("created_at")
   updatedAt   DateTime @default(now()) @map("updated_at")
+  reviews     Review[]
+  categoryId  Int
+  category    Category @relation(fields: [categoryId], references: [id])
+}
 
-  reviews Review[]
+model Category {
+  id       Int       @id @default(autoincrement())
+  text     String
+  products Product[]
 }
 
 model Review {
@@ -26,7 +34,6 @@ model Review {
   rating    Int
   createdAt DateTime @default(now()) @map("created_at")
   updatedAt DateTime @default(now()) @map("updated_at")
-
   productId Int      @map("product_id")
   product   Product? @relation(fields: [productId], references: [id])
 }
