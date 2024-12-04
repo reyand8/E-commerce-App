@@ -1,0 +1,69 @@
+.carousel {
+  @apply grid grid-cols-4 gap-11 mt-32;
+}
+
+.item {
+  @apply rounded-3xl bg-light-gray p-6 pt-2 mb-10 relative cursor-pointer;
+
+  .heading {
+    @apply font-bold text-xl text-beige text-left leading-9 block;
+
+    > span {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+  }
+
+  .information {
+    @apply text-sm mt-4 text-beige opacity-90 leading-9 animate-opacity;
+  }
+
+  > div {
+    @apply relative;
+  }
+
+  .link {
+    @apply text-sm text-center block mt-3 text-white;
+
+    &:hover {
+      color: lightgrey;
+    }
+  }
+
+  &.active {
+    @apply bg-green shadow-2xl shadow-green bg-contain bg-no-repeat;
+    background-image: url("/images/bg.jpg");
+    background-position: center -5px;
+
+    &::before {
+      @apply w-full h-full absolute top-0 left-0 rounded-3xl;
+      content: '';
+      background-image: linear-gradient(180deg, rgba(105, 143, 104, 0.5) 29%, rgb(71, 154, 62) 40%);
+    }
+
+    .heading {
+      @apply text-3xl text-white;
+    }
+  }
+}
+
+.variations {
+  @apply grid grid-cols-4 gap-3 mt-5 animate-opacity;
+
+  &.medium {
+    > button {
+      @apply text-[0.8rem];
+    }
+  }
+
+  > button {
+    @apply border border-solid border-white text-[0.6rem] text-white text-center transition-colors
+    font-semibold uppercase py-0.5 px-0.5 bg-transparent rounded;
+
+    &.active {
+      @apply text-dark-green bg-white
+    }
+  }
+}
