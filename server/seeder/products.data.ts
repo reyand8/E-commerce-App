@@ -111,7 +111,7 @@ export const desserts: IProductPart[] = [
 	},
 	{
 		name: 'Chocolate Cake',
-		images: ['//uploads/images/products/desserts/cake1.png'],
+		images: ['/uploads/images/products/desserts/cake1.png'],
 		category: 'Dessert',
 		description: 'Decadent chocolate cake with rich chocolate layers and creamy frosting.',
 		ingredients: 'Flour, sugar, cocoa, eggs, butter, cream',
