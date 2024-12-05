@@ -1,5 +1,6 @@
 import { Product } from '@prisma/client';
 
+
 export interface IProductPart extends Pick<Product, 'name' | 'images'> {
 	category: 'Tea' | 'Coffee' | 'Dessert' | 'Salad' | 'Burger';
 	description: string;
@@ -7,17 +8,10 @@ export interface IProductPart extends Pick<Product, 'name' | 'images'> {
 	price: number;
 }
 
-
-export const products: IProductPart[] = [
-
-	// Drinks
-
+export const drinks: IProductPart[] = [
 	{
 		name: 'Berry Morse and Cappuccino-Midnight Mint',
-		images: [
-			'/uploads/images/products/drinks/berry-morse.png',
-			'/uploads/images/products/drinks/cappuccino.png',
-		],
+		images: ['/uploads/images/products/drinks/berry-morse.png', '/uploads/images/products/drinks/cappuccino.png'],
 		category: 'Coffee',
 		description: 'Refreshing berry Morse paired with aromatic cappuccino and a hint of mint.',
 		ingredients: 'Berries, milk, coffee, mint, sugar',
@@ -71,10 +65,10 @@ export const products: IProductPart[] = [
 		ingredients: 'Coffee, milk, sugar',
 		price: 4.99,
 	},
+];
 
 
-	// Desserts
-
+export const desserts: IProductPart[] = [
 	{
 		name: 'Cinnabon',
 		images: ['/uploads/images/products/desserts/cinnamon.png'],
@@ -123,10 +117,10 @@ export const products: IProductPart[] = [
 		ingredients: 'Flour, sugar, cocoa, eggs, butter, cream',
 		price: 6.99,
 	},
+];
 
 
-	// 	Salads
-
+export const salads: IProductPart[] = [
 	{
 		name: 'Greek Salad',
 		images: ['/uploads/images/products/salads/salad1.png'],
@@ -151,10 +145,10 @@ export const products: IProductPart[] = [
 		ingredients: 'Lettuce, tomatoes, cucumbers, carrots, olive oil, vinegar',
 		price: 3.99,
 	},
+];
 
 
-	// Burgers
-
+export const burgers: IProductPart[] = [
 	{
 		name: 'Classic Beef Burger',
 		images: ['/uploads/images/products/burgers/burger4.png'],
