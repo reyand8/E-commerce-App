@@ -49,7 +49,7 @@ async function main(): Promise<void> {
 	const products: IProductPart[] = [...drinks, ...desserts, ...salads, ...burgers];
 
 	await Promise.all(
-		products.map(async (product: IProductPart) => {
+		products.map(async (product: IProductPart): Promise<void> => {
 			const productData = fakerProduct(product, categories[product.category]);
 			await prisma.product.create({ data: productData });
 		})
@@ -62,6 +62,6 @@ main()
 	.catch((e) => {
 		console.error('Error seeding the database:', e);
 	})
-	.finally(async () => {
+	.finally(async (): Promise<void> => {
 		await prisma.$disconnect();
 	});
