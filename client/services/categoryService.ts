@@ -1,4 +1,3 @@
-import { IProduct } from '@/types/product.interface';
 import {axiosBase} from '@/api/api';
 import {ICategory} from '@/types/category.interface';
 
