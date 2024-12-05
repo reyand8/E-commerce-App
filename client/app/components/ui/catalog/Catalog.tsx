@@ -1,30 +1,18 @@
-import { FC, useState } from 'react';
-import { useQuery } from '@tanstack/react-query';
+import { FC } from 'react';
 
-import styles from './Catalog.module.scss';
 import { IProduct } from '@/types/product.interface';
-import {EnumSorting} from "@/app/components/ui/catalog/sorting/sorting.interface";
-import {ProductService} from "@/services/productService";
-import {Sorting} from "@/app/components/ui/catalog/sorting/Sorting";
-import Loader from "@/app/components/ui/loader/Loader";
-import {Carousel} from "@/app/components/ui/catalog/carousel/Carousel";
+import {Carousel} from '@/app/components/ui/catalog/carousel/Carousel';
+import styles from '@/app/components/ui/catalog/Catalog.module.scss';
 
 
-export const Catalog: FC<{ products: IProduct[] }> = ({ products }) => {
-	const [sortType, setSortType] = useState<EnumSorting>(EnumSorting.NEWEST);
-	const { data, isLoading } = useQuery({
-		queryKey: ['products', sortType],
-		queryFn: () => ProductService.getProducts(sortType),
-		initialData: products,
-	});
+export const Catalog: FC<{ products: IProduct[]; cat: string  }> = ({ products, cat }) => {
 
 	return (
 		<div className='relative'>
-			<div className={styles.sorting}>
-				<Sorting sortType={ sortType } setSortType={setSortType}/>
+			<div className={styles.category}>
+				<span>{cat}</span>
 			</div>
-			{ isLoading ? <Loader />
-				: <Carousel products={data} /> }
+			<Carousel products={products} cat={cat}/>
 		</div>
 	);
 };
