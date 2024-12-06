@@ -21,6 +21,7 @@ const fakerProduct = (product: IProductPart, category: any): Prisma.ProductCreat
 		description: product.description,
 		ingredients: product.ingredients,
 		price: product.price,
+		size: product.size,
 		category: {
 			connect: { id: category.id },
 		},

@@ -13,7 +13,8 @@ model Product {
   name        String   @unique
   description String
   ingredients String
-  price       Float
+  price       Float[]
+  size        String[]
   images      String[]
   createdAt   DateTime @default(now()) @map("created_at")
   updatedAt   DateTime @default(now()) @map("updated_at")

@@ -7,6 +7,7 @@ import { PrismaService } from './prisma.service';
 import { ProductModule } from './product/product.module';
 import { ReviewModule } from './review/review.module';
 import { PaymentModule } from './payment/payment.module';
+import { CategoryModule } from './categories/category.module';
 
 
 @Module({
@@ -17,10 +18,12 @@ import { PaymentModule } from './payment/payment.module';
       serveRoot: '/uploads',
     }),
     ProductModule,
+    CategoryModule,
     ReviewModule,
     PaymentModule,
   ],
   controllers: [],
   providers: [PrismaService],
 })
+
 export class AppModule {}

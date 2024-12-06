@@ -17,6 +17,7 @@ export class ProductService {
 		type?: sortType,
 		take?: number,
 		skip?: number,
+		categoryIds?: number[]
 	): Promise<Product[]> {
 		const DEFAULT_TAKE: 100 = 100;
 		const DEFAULT_SKIP: 0 = 0;
@@ -33,8 +34,14 @@ export class ProductService {
 		const orderBy: {[p: string]: string} = {
 			[isSortByPrice ? 'price' : 'createdAt']: isAsc ? 'asc' : 'desc',
 		};
+		const catCondition = categoryIds && categoryIds.length > 0
+			? { categoryId: { in: categoryIds } }
+			: {};
 
 		return this.prisma.product.findMany({
+			where: {
+				...catCondition,
+			},
 			skip,
 			take,
 			orderBy,

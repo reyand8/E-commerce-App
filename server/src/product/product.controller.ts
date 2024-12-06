@@ -35,8 +35,13 @@ export class ProductController {
 		@Query('sortType') type?: sortType,
 		@Query('take') take?: string,
 		@Query('skip') skip?: string,
+		@Query('categoryIds') categoryIds?: string,
 	): Promise<Product[]> {
-		return this.productService.findAll(type, +take, +skip);
+		const categoryIdsArray: number[] = categoryIds
+			? categoryIds.split(',').map(id => +id)
+			: undefined;
+		return this.productService.findAll(
+			type, +take, +skip, categoryIdsArray);
 	}
 
 	@Get('search')

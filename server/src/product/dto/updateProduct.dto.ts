@@ -6,6 +6,7 @@ export class UpdateProductDto extends PartialType(CreateProductDto) {
 	slug?: string;
 	name?: string;
 	description?: string;
-	price?: number;
+	price?: number[];
+	size?: string[]
 	images?: string[];
 }
