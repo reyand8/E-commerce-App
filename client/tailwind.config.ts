@@ -7,6 +7,7 @@ const constants = {
   'light-green': '#dae7e3',
   black: '#1e1d1d',
   white: '#f1f1f1',
+  'dark-gray': '#adabab',
   'light-gray': '#e3e2df',
   red: '#de3637',
   beige: '#9d9589',
