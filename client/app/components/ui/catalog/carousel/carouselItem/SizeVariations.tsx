@@ -2,31 +2,26 @@ import { FC } from 'react';
 import cn from 'clsx';
 
 import styles from '../Carousel.module.scss';
-import {TypeSize} from "@/types/sliceCart.interface";
 import {ICarouselVariations} from "@/types/carousel.interface";
-
-
-const SIZES: TypeSize[] = ['SHORT', 'TALL', 'GRANDE', 'VENT'];
 
 
 export const SizeVariations: FC<ICarouselVariations> = ({
 	selectedSize, setSelectedSize,
-	variant ='short',
+	variant ='short', size
 }) => {
 
 	return (
 		<div className={cn(styles.variations, {
 			[styles.medium]: variant === 'medium',
 		})}>
-			{SIZES.map(size =>(
+			{size.map((sizeItem: string, index: number) =>(
 				<button
-					key={size}
+					key={sizeItem}
 					className={cn({
-						[styles.active]: selectedSize === size
+						[styles.active]: selectedSize === sizeItem
 					})}
-					onClick={ () => setSelectedSize(size) }
-
-				>{ size }</button>
+					onClick={ () => setSelectedSize(sizeItem, index) }
+				>{ sizeItem }</button>
 			))}
 		</div>
 	);

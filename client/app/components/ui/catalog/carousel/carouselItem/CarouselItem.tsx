@@ -8,16 +8,28 @@ import { SizeVariations } from '@/app/components/ui/catalog/carousel/carouselIte
 import { CarouselNavigation } from '@/app/components/ui/catalog/carousel/carouselItem/carouselNavigation/CarouselNavigation';
 import { useCarousel } from '@/app/components/ui/catalog/carousel/carouselItem/useCarousel';
 import { ICarouselItem } from '@/types/carousel.interface';
-import {TypeSize} from '@/types/sliceCart.interface';
-import {useActions} from '@/app/hooks/useActions';
+import { useActions } from '@/app/hooks/useActions';
 import styles from '../Carousel.module.scss';
 
 
 export const CarouselItem: FC<ICarouselItem> = ({ product, qty, index, key, cat }) => {
-	const [selectedSize, setSelectedSize] = useState<TypeSize>('SHORT');
+	const [selDrinkSize, setSelDrinkSize] = useState<string>('240 ml');
+	const [selFoodSize, setSelFoodSize] = useState<string>(product.size[0]);
+	const [ sizePrise, setSizeIndex ] = useState<number>(0)
+
 	const { selectedItemIndex } = useCarousel(cat);
 	const { selectSlide } = useActions();
-	const isActive = index === selectedItemIndex;
+	const isActive: boolean = index === selectedItemIndex;
+
+
+	const handleSizeChange = (size: string, index: number): void => {
+		if (cat === 'Drinks') {
+			setSelDrinkSize(size)
+		} else {
+			setSelFoodSize(size)
+		}
+		setSizeIndex(index)
+	}
 
 	return (
 		<motion.div
@@ -43,10 +55,31 @@ export const CarouselItem: FC<ICarouselItem> = ({ product, qty, index, key, cat 
 					<>
 						{
 							cat === 'Drinks' ? (
-								<SizeVariations selectedSize={selectedSize} setSelectedSize={setSelectedSize} />
-							) : <></>
+								<>
+									<SizeVariations
+										selectedSize={selDrinkSize}
+										setSelectedSize={handleSizeChange}
+										size={product.size}
+									/>
+									<AddToCartButton
+										product={{...product, price: product.price[sizePrise]}}
+										selectedSize={selDrinkSize}
+									/>
+								</>
+							) :
+								<>
+									<SizeVariations
+										selectedSize={selFoodSize}
+										setSelectedSize={handleSizeChange}
+										size={product.size}
+									/>
+									<AddToCartButton
+										product={{...product, price: product.price[sizePrise]}}
+										selectedSize={selFoodSize}
+									/>
+								</>
 						}
-						<AddToCartButton product={product} selectedSize={selectedSize} />
+
 						<Link href={`/product/${product.slug}`} className={styles.link}>More details</Link>
 					</>
 				) : (
