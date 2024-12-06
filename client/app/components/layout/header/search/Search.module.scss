@@ -1,0 +1,16 @@
+.search {
+    @apply relative w-1/3 ;
+
+  > div {
+    @apply relative;
+  }
+
+  .input {
+   @apply border-b-dark-gray
+  }
+
+  &::before {
+    content: '';
+    @apply bg-light-green -left-[10%] -top-[470%] w-[120%] pt-[120%] rounded-full absolute;
+  }
+}
