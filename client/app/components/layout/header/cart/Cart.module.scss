@@ -1,0 +1,43 @@
+.wrapper-cart {
+  @apply flex items-center gap-8;
+  .basket {
+    @apply flex items-center font-semibold text-xl tracking-widest cursor-pointer;
+    .badge {
+      @apply flex items-center w-7 h-7 m-4 rounded-full bg-red p-2 pt-2 text-white text-sm;
+    }
+    .badgeMoreTen {
+      @apply flex items-center w-8 h-8 m-4 rounded-full bg-red p-[6px] pt-1.5 text-white text-sm;
+    }
+  }
+}
+
+.cart {
+  .item {
+    @apply pb-6 pt-4 flex items-center gap-5 border-b border-b-['light-green'];
+    .name {
+      @apply tracking-widest truncate w-60 font-semibold text-xl;
+    }
+    .price {
+      @apply text-sm text-beige mt-1 text-lg;
+    }
+    .variation {
+      @apply text-xs opacity-70 text-beige capitalize;
+    }
+  }
+}
+
+.footer {
+  > div:first-child {
+    @apply text-xl text-beige;
+  }
+  > div:last-child {
+    @apply text-xl font-semibold;
+  }
+}
+
+.options {
+  @apply flex items-center mt-4;
+  .delete-button {
+    @apply text-2xl ml-10 pl-2 pr-2;
+  }
+}
