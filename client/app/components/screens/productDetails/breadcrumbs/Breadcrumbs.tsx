@@ -2,10 +2,10 @@ import  { FC } from 'react';
 import Link from 'next/link';
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink } from '@chakra-ui/react';
 
-import { IProductDetails } from '@/types/product.interface';
+import { IProductBreadcrumbs } from '@/types/product.interface';
 
 
-const Breadcrumbs: FC<IProductDetails> = ({ product }) => {
+const Breadcrumbs: FC<IProductBreadcrumbs> = ({ product }) => {
 	return (
 		<Breadcrumb display='flex'
 			justifyContent='end'
