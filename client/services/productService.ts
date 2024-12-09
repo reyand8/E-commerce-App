@@ -36,7 +36,7 @@ export const ProductService = {
     async bySlug(slug: string): Promise<AxiosResponse<IProduct>> {
         return axiosBase.get<IProduct>(`${PRODUCTS}/slug/${slug}`);
     },
-    async getRelatives(withoutId: number): Promise<AxiosResponse<IProduct[]>> {
-        return axiosBase.get<IProduct[]>(`${PRODUCTS}/relatives/${withoutId}`);
+    async getRelatives(catId: number): Promise<AxiosResponse<IProduct[]>> {
+        return axiosBase.get<IProduct[]>(`${PRODUCTS}/relatives/${catId}`);
     },
 };

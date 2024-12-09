@@ -121,17 +121,17 @@ export class ProductService {
 		return product;
 	}
 
-	async findRelatives(currentProductId: number): Promise<Product[]> {
+	async findRelatives(catId: number): Promise<Product[]> {
 		const product =
 			await this.prisma.product.findMany({
 			where: {
-				id: {
-					not: currentProductId,
+				categoryId: {
+					in: [catId],
 				}
 			}
 		});
 		if (!product)
-			throw new NotFoundException(`Product with id: ${currentProductId} not found`);
+			throw new NotFoundException(`Product with category id: ${catId} not found`);
 		return product;
 	}
 }

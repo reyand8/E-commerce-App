@@ -13,9 +13,9 @@ import styles from '../Carousel.module.scss';
 
 
 export const CarouselItem: FC<ICarouselItem> = ({ product, qty, index, key, cat }) => {
-	const [selDrinkSize, setSelDrinkSize] = useState<string>('240 ml');
+	const [selDrinkSize, setSelDrinkSize] = useState<string>(product.size[0]);
 	const [selFoodSize, setSelFoodSize] = useState<string>(product.size[0]);
-	const [ sizePrise, setSizeIndex ] = useState<number>(0)
+	const [ sizePrise, setSizePrise ] = useState<number>(0)
 
 	const { selectedItemIndex } = useCarousel(cat);
 	const { selectSlide } = useActions();
@@ -28,7 +28,7 @@ export const CarouselItem: FC<ICarouselItem> = ({ product, qty, index, key, cat 
 		} else {
 			setSelFoodSize(size)
 		}
-		setSizeIndex(index)
+		setSizePrise(index)
 	}
 
 	return (
