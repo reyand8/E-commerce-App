@@ -1,0 +1,17 @@
+:global {
+//@tailwind base;
+//@tailwind components;
+//@tailwind utilities;
+}
+
+body {
+    @apply text-base text-black;
+    background: rgb(241 241 241)!important;
+}
+
+.disabled {
+    pointer-events: none;
+    cursor: default;
+    text-decoration: none;
+    opacity: 0.3 !important;
+}
