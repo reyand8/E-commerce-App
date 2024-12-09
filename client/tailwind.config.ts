@@ -4,10 +4,11 @@ import colors from 'tailwindcss/colors';
 const constants = {
   green: '#018c63',
   'dark-green': '#01573f',
+  'bg-green': '#73AF90C1',
   'light-green': '#dae7e3',
   black: '#1e1d1d',
   white: '#f1f1f1',
-  'dark-gray': '#adabab',
+  'dark-gray': '#e3e2df',
   'light-gray': '#e3e2df',
   red: '#de3637',
   beige: '#9d9589',
