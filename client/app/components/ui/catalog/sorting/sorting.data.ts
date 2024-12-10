@@ -1,4 +1,4 @@
-import {EnumSorting, ISortingItem} from "@/app/components/ui/catalog/sorting/sorting.interface";
+import {EnumSorting, ISortingItem} from '@/app/components/ui/catalog/sorting/sorting.interface';
 
 
 export const sortingData: ISortingItem[] = [

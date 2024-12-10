@@ -5,7 +5,8 @@ import {Carousel} from '@/app/components/ui/catalog/carousel/Carousel';
 import styles from '@/app/components/ui/catalog/Catalog.module.scss';
 
 
-export const Catalog: FC<{ products: IProduct[]; cat: string; relative?: boolean;  }> = ({ products, cat, relative }) => {
+export const Catalog: FC<{ products: IProduct[]; cat: string; relative?: boolean;  }> =
+	({ products, cat, relative }) => {
 
 	return (
 		<div className='relative'>

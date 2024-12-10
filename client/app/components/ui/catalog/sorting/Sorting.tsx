@@ -1,16 +1,11 @@
-import { Dispatch, FC, SetStateAction } from 'react';
+import { FC } from 'react';
 import {Menu, MenuButton, MenuItem, MenuList} from '@chakra-ui/menu';
+import {Button} from '@chakra-ui/react';
 import { ChevronDownIcon } from '@chakra-ui/icons';
 
-import {EnumSorting, ISortingItem} from "@/app/components/ui/catalog/sorting/sorting.interface";
-import {sortingData} from "@/app/components/ui/catalog/sorting/sorting.data";
-import {Button} from "@chakra-ui/react";
+import { ISorting, ISortingItem } from '@/app/components/ui/catalog/sorting/sorting.interface';
+import { sortingData } from '@/app/components/ui/catalog/sorting/sorting.data';
 
-
-interface ISorting {
-	sortType: EnumSorting;
-	setSortType: Dispatch<SetStateAction<EnumSorting>>;
-}
 
 export const Sorting: FC<ISorting> = ({ setSortType, sortType }) => {
 	return (

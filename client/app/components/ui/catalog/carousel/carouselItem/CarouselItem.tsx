@@ -12,7 +12,8 @@ import { useActions } from '@/app/hooks/useActions';
 import styles from '../Carousel.module.scss';
 
 
-export const CarouselItem: FC<ICarouselItem> = ({ product, qty, index, key, cat }) => {
+export const CarouselItem: FC<ICarouselItem> =
+	({ product, qty, index, key, cat }) => {
 	const [selDrinkSize, setSelDrinkSize] = useState<string>(product.size[0]);
 	const [selFoodSize, setSelFoodSize] = useState<string>(product.size[0]);
 	const [ sizePrise, setSizePrise ] = useState<number>(0)

@@ -1,3 +1,5 @@
+import {Dispatch, SetStateAction} from 'react';
+
 export enum EnumSorting {
 	NEWEST = 'newest',
 	OLDEST = 'oldest',
@@ -8,4 +10,9 @@ export enum EnumSorting {
 export interface ISortingItem {
 	label: 'Newest' | 'Oldest' | 'Price: low to high' | 'Price: high to low';
 	value: EnumSorting;
+}
+
+export interface ISorting {
+	sortType: EnumSorting;
+	setSortType: Dispatch<SetStateAction<EnumSorting>>;
 }
