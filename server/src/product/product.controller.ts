@@ -45,10 +45,10 @@ export class ProductController {
 	}
 
 	@Get('search')
-	async findBySearchTerm(
-		@Query('searchTerm') searchTerm?: string,
+	async findBySearchString(
+		@Query('searchString') searchString?: string,
 	): Promise<Product[]> {
-		return this.productService.findBySearchTerm(searchTerm);
+		return this.productService.findBySearchString(searchString);
 	}
 
 	@Get(':id')

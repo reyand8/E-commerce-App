@@ -14,3 +14,21 @@
     @apply bg-light-green -left-[10%] -top-[470%] w-[120%] pt-[120%] rounded-full absolute;
   }
 }
+
+.search_box {
+  @apply rounded-xl bg-light-gray p-6 pl-2 pt-1 mb-10 absolute cursor-pointer z-10 w-full overflow-y-auto;
+  max-height: 400px;
+
+  .item {
+    @apply flex items-center border-b border-b-green py-2;
+  }
+
+  .title {
+    @apply font-semibold text-sm text-beige text-left leading-9 mx-3;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+
+  }
+}

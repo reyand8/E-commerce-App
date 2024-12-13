@@ -23,12 +23,11 @@ export const ProductService = {
 
         return data;
     },
-    async bySearchTerm(searchTerm: string): Promise<AxiosResponse<IProduct[]>> {
-        return axiosBase.get<IProduct[]>(`${PRODUCTS}/search`, {
-            params: {
-                searchTerm
-            }
+    async bySearchString(searchString: string): Promise<IProduct[]> {
+        const { data } = await axiosBase.get<IProduct[]>(`${PRODUCTS}/search`, {
+            params: { searchString }
         });
+        return data;
     },
     async byId(id: number): Promise<AxiosResponse<IProduct>> {
         return axiosBase.get<IProduct>(`${PRODUCTS}/${id}`);

@@ -73,19 +73,19 @@ export class ProductService {
 		await this.prisma.product.deleteMany({ where: { id } });
 	}
 
-	async findBySearchTerm(searchTerm?: string): Promise<Product[]> {
+	async findBySearchString(searchString?: string): Promise<Product[]> {
 		return this.prisma.product.findMany({
 			where: {
 				OR: [
 					{
 						name: {
-							contains: searchTerm,
+							contains: searchString,
 							mode: 'insensitive'
 						}
 					},
 					{
 						description: {
-							contains: searchTerm,
+							contains: searchString,
 							mode: 'insensitive'
 						}
 					}
