@@ -4,7 +4,7 @@ import Drinks from '@/app/components/screens/drinks/Drinks';
 
 
 const CoffeePage: NextPage = () => {
-    return <Drinks page={'Coffee'}/>;
+    return <Drinks page={'coffee'}/>;
 };
 
 export default CoffeePage;
