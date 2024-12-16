@@ -1,0 +1,23 @@
+.footer {
+  @apply relative flex justify-between items-end max-w-7xl mx-auto border-t-2 border-t-['dark-green'];
+  margin-top: 10rem;
+  .footer_title {
+    @apply text-xs;
+  }
+  .footer_menu {
+    @apply flex flex-col items-start gap-3 mt-6;
+      > li {
+        @apply list-none;
+        > a {
+          @apply text-xs tracking-widest uppercase text-black no-underline font-semibold relative;
+          &::after {
+            content: '';
+            @apply bg-black w-0 left-0 -bottom-3 h-0.5 transition-all duration-300 absolute;
+          }
+          &:hover::after {
+            @apply w-full;
+          }
+        }
+      }
+    }
+}

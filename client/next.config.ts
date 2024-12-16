@@ -3,7 +3,8 @@ import { NextConfig } from 'next';
 const nextConfig: NextConfig = {
     reactStrictMode: true,
     env: {
-        REACT_APP_SERVER_URL: process.env.REACT_APP_SERVER_URL,
+        REACT_APP_SERVER_URL: process.env.NEXT_APP_SERVER_URL,
+        NEXT_APP_GOOGLE_MAPS_API_KEY: process.env.NEXT_APP_GOOGLE_MAPS_API_KEY,
     },
     async headers() {
         return [

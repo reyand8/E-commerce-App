@@ -1,7 +1,6 @@
 .layout {
   > main {
     @apply bg-white pb-8 pt-4 px-10;
-
     > .content {
       @apply relative max-w-7xl mx-auto;
     }
