@@ -4,7 +4,7 @@ import Image from 'next/image';
 import styles from './../Cart.module.scss';
 import {ICartItem} from '@/types/cartItem.interface';
 import {editCurrencyFormat} from "@/app/utils/editCurrencyFormat";
-import {CartActions} from '@/app/components/layout/header/cart/cartItem/cartActions/CartActions';
+import {CartActions} from '@/components/layout/header/cart/cartItem/cartActions/CartActions';
 
 
 export const CartItem: FC<{ item: ICartItem }> = ({ item }) => {

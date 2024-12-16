@@ -7,7 +7,7 @@ import { useQuery } from '@tanstack/react-query';
 import styles from './Search.module.scss';
 import { ProductService } from '@/services/productService';
 import {IProduct} from '@/types/product.interface';
-import SearchResult from '@/app/components/layout/header/search/searchResult/SearchResult';
+import SearchResult from '@/components/layout/header/search/searchResult/SearchResult';
 
 
 const Search: FC = () => {

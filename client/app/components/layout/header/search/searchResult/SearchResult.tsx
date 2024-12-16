@@ -2,8 +2,8 @@ import { FC } from 'react';
 import {Box} from '@chakra-ui/react';
 
 import {IProduct} from '@/types/product.interface';
-import Loader from '@/app/components/ui/loader/Loader';
-import SearchItem from '@/app/components/layout/header/search/searchResult/searchItem/SearchItem';
+import Loader from '@/components/ui/loader/Loader';
+import SearchItem from '@/components/layout/header/search/searchResult/searchItem/SearchItem';
 import styles from '../Search.module.scss';
 
 export interface ISearchResult {

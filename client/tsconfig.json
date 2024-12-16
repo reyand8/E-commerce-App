@@ -23,6 +23,15 @@
       "@/screens/*": [
         "components/screens/*"
       ],
+      "@/assets/*": [
+        "'@/app/assets/*"
+      ],
+      "@/components/*": [
+        "app/components/*"
+      ],
+      "@/public/*": [
+        "public/*"
+      ],
       "@/*": [
         "./*"
       ]

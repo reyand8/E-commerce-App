@@ -1,4 +1,4 @@
-import { IMenuLink } from '@/app/components/layout/header/menu/menuItem/menuItem.interface';
+import { IMenuLink } from '@/components/layout/header/menu/menuItem/menuItem.interface';
 
 export const menu: IMenuLink[] = [
 	{ link: '/coffee', name: 'Coffee' },

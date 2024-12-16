@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import { Provider } from 'react-redux';
 import { Snowfall } from 'react-snowfall';
 import { PersistGate } from 'redux-persist/integration/react';
@@ -7,8 +8,8 @@ import { ChakraProvider } from '@chakra-ui/react';
 
 import '@/app/assets/styles/global.scss';
 import { persistor, store } from '@/store/store';
-import snowflakeImg from '../public/images/snowflake.png';
-import { useState, useEffect } from 'react';
+import snowflakeImg from '@/public/images/snowflake.png';
+
 
 const queryClient: QueryClient = new QueryClient();
 

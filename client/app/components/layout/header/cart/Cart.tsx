@@ -6,12 +6,11 @@ import {
 } from '@chakra-ui/modal';
 import { Button } from '@chakra-ui/react';
 
-
 import styles from './Cart.module.scss';
 import {editCurrencyFormat} from '@/app/utils/editCurrencyFormat';
 import {useCart} from '@/app/hooks/useCart';
-import {CartItem} from '@/app/components/layout/header/cart/cartItem/CartItem';
-import {ModalWindow} from '@/app/components/layout/modal/ModalWindow';
+import {CartItem} from '@/components/layout/header/cart/cartItem/CartItem';
+import {ModalWindow} from '@/components/layout/modal/ModalWindow';
 
 
 const Cart: FC = () => {

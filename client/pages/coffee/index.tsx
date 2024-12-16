@@ -1,6 +1,6 @@
 import { NextPage } from 'next';
 
-import Drinks from '@/app/components/screens/drinks/Drinks';
+import Drinks from '@/components/screens/drinks/Drinks';
 
 
 const CoffeePage: NextPage = () => {

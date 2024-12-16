@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { FC } from 'react';
 
-import {IMenuItem} from '@/app/components/layout/header/menu/menuItem/menuItem.interface';
+import {IMenuItem} from '@/components/layout/header/menu/menuItem/menuItem.interface';
 
 
 const MenuItem: FC<IMenuItem> = ({ item }) => {

@@ -1,6 +1,6 @@
 import {AxiosResponse} from 'axios';
 
-import {EnumSorting} from '@/app/components/ui/catalog/sorting/sorting.interface';
+import {EnumSorting} from '@/components/ui/catalog/sorting/sorting.interface';
 import { IProduct } from '@/types/product.interface';
 import {axiosBase} from '@/api/api';
 

@@ -1,7 +1,7 @@
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
 
 import { IProduct, IProductDetails, ISlugProductDetails } from '@/types/product.interface';
-import ProductDetails from '@/app/components/screens/productDetails/ProductDetails';
+import ProductDetails from '@/components/screens/productDetails/ProductDetails';
 import { ProductService } from '@/services/productService';
 
 

@@ -4,8 +4,8 @@ import Link from 'next/link';
 
 import { menu } from './menu.data';
 import styles from './Menu.module.scss';
-import MenuItem from '@/app/components/layout/header/menu/menuItem/MenuItem';
-import {IMenuLink} from '@/app/components/layout/header/menu/menuItem/menuItem.interface';
+import MenuItem from '@/components/layout/header/menu/menuItem/MenuItem';
+import {IMenuLink} from '@/components/layout/header/menu/menuItem/menuItem.interface';
 
 
 const Menu: FC = () => {
