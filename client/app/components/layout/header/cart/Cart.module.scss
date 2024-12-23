@@ -21,7 +21,7 @@
 
 .cart {
   .item {
-    @apply pb-6 pt-4 flex items-center gap-5 border-b border-b-['light-green'];
+    @apply pb-6 pt-4 flex items-center gap-2 border-b border-b-['light-green'];
     .name {
       @apply tracking-widest truncate w-60 font-semibold text-xl;
     }

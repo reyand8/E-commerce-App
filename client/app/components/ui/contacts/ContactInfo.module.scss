@@ -1,5 +1,5 @@
 .info {
-  @apply flex-col border-r pr-8 pt-8 border-r-dark-gray;
+  @apply flex-col md:border-r pr-8 pt-8 md:border-r-dark-gray;
   > div span {
     @apply font-bold text-lg text-dark-beige text-left leading-9 block;
   }

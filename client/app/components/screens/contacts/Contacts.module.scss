@@ -5,9 +5,9 @@
   @apply max-w-[9.5rem]
 }
 .contact_info {
-  @apply p-8 relative flex justify-around mt-[84px] bg-bg-green ;
+  @apply p-8 relative flex items-center md:flex-row flex-col justify-around mt-[84px] bg-bg-green;
   border-radius: 2rem;
 }
 .map {
-  @apply h-[500px] w-1/2
+  @apply h-[500px] w-2/3  md:mt-0 mt-8;
 }

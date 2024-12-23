@@ -1,5 +1,5 @@
 .card {
-  @apply p-14 relative mt-6 mb-16 bg-bg-green grid grid-cols-3 gap-5 pb-16;
+  @apply lg:p-14 p-7 relative mt-6 mb-16 bg-bg-green grid grid-cols-1 lg:grid-cols-3 gap-5 pb-16;
   border-radius: 2rem;
 
   .information {
@@ -37,7 +37,7 @@
   .image {
     @apply text-center;
     .main {
-      @apply bg-white rounded-full mx-auto overflow-hidden w-[18.4rem] h-[18.4rem] flex items-center justify-center;
+      @apply bg-white rounded-full mx-auto overflow-hidden lg:w-[18.4rem] lg:h-[18.4rem] w-[12.4rem] h-[12.4rem] flex items-center justify-center;
       box-shadow: 0 5px 100px -50px #6c946b;
 
       img {
@@ -45,7 +45,7 @@
       }
     }
     .price {
-      @apply text-2xl text-dark-beige -mt-[3.75rem] font-bold text-green;
+      @apply text-2xl lg:-mt-[3.75rem] -mt-[2.75rem] font-bold text-green;
     }
   }
 
