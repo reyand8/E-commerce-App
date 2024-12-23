@@ -2,9 +2,9 @@
   @apply flex items-center md:gap-4 xl:gap-12;
   > nav {
     > ul {
-      @apply flex items-center md:gap-4 xl:gap-7;
+      @apply flex flex-col items-start ml-8 mt-6;
       > li {
-        @apply list-none;
+        @apply list-none my-2;
         > a {
           @apply tracking-widest uppercase text-black no-underline font-semibold relative;
           &::after {

@@ -1,5 +1,5 @@
 .carousel {
-  @apply grid grid-cols-4 gap-11 mt-32;
+  @apply grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-11 mt-32 mx-5 md:mx-0;
 }
 
 .item {
@@ -33,7 +33,7 @@
   }
 
   &.active {
-    @apply bg-green shadow-2xl shadow-green bg-contain bg-no-repeat;
+    @apply bg-green shadow-2xl shadow-green bg-contain;
     background-image: url("/images/bg.jpg");
     background-position: center -5px;
 

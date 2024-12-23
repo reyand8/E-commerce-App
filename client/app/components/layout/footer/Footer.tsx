@@ -10,14 +10,14 @@ export const Footer: FC = () => {
     return (
         <div className={styles.footer}>
             <div>
-                <p className={styles.footer_title}>© 2024 E-Commerce App. All rights reserved.</p>
-            </div>
-            <div>
                 <ul className={styles.footer_menu}>
                     {footer.map((item: IFooterMenuLink) =>
                         <FooterItem key={item.link} item={item}/>
                     )}
                 </ul>
+            </div>
+            <div>
+                <p className={styles.footer_title}>© 2024 E-Commerce App. All rights reserved.</p>
             </div>
         </div>
 

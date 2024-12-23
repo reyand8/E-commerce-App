@@ -1,7 +1,15 @@
 .wrapper-cart {
-  @apply flex items-center gap-8;
+  @apply items-center gap-8 lg:flex;
   .basket {
     @apply flex items-center font-semibold text-xl tracking-widest cursor-pointer;
+    .title {
+      @apply lg:block hidden;
+    }
+    .icon {
+      @apply -ml-8 -z-10;
+      width: 54px;
+      height: 54px;
+    }
     .badge {
       @apply flex items-center w-7 h-7 m-4 rounded-full bg-red p-2 pt-2 text-white text-sm;
     }

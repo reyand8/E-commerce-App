@@ -1,11 +1,11 @@
 .footer {
-  @apply relative flex justify-between items-end max-w-7xl mx-auto border-t-2 border-t-['dark-green'];
+  @apply relative flex justify-between flex-col sm:flex-row sm:items-end items-start max-w-7xl mx-auto border-t-2 border-t-['dark-green'];
   margin-top: 10rem;
   .footer_title {
     @apply text-xs;
   }
   .footer_menu {
-    @apply flex flex-col items-start gap-3 mt-6;
+    @apply flex flex-col items-start gap-3 mt-6 sm:mb-1 mb-5;
       > li {
         @apply list-none;
         > a {
