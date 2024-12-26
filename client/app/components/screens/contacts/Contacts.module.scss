@@ -5,7 +5,7 @@
   @apply max-w-[9.5rem]
 }
 .contact_info {
-  @apply p-8 relative flex items-center md:flex-row flex-col justify-around mt-[84px] bg-bg-green;
+  @apply md:p-8 p-2 relative flex items-center md:flex-row flex-col justify-around mt-[84px] bg-bg-green;
   border-radius: 2rem;
 }
 .map {
