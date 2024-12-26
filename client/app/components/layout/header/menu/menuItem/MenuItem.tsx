@@ -4,9 +4,9 @@ import { FC } from 'react';
 import {IMenuItem} from '@/components/layout/header/menu/menuItem/menuItem.interface';
 
 
-const MenuItem: FC<IMenuItem> = ({ item }) => {
+const MenuItem: FC<IMenuItem> = ({ key, item }) => {
 	return (
-		<li>
+		<li key={key}>
 			<Link href={item.link}>{item.name}</Link>
 		</li>
 	);
