@@ -20,7 +20,7 @@ const Menu: FC<{page: string}> = ({page}) => {
     const [ allCat, setAllCat ] = useState<number[]>([]);
     const [ allFilteredMenu, setAllFilteredMenu ] = useState<IProduct[]>([]);
 
-    const { data: categories, isLoading: isLoadingCategories } = useQuery<ICategory[]>({
+    const { data: categories = [], isLoading: isLoadingCategories } = useQuery<ICategory[]>({
         queryKey: ['categories'],
         queryFn: () => CategoryService.getCategories(),
     });
@@ -57,7 +57,7 @@ const Menu: FC<{page: string}> = ({page}) => {
         <>
             <Layout title={page} description='Select menu'>
                 <Heading className='text-center'>
-                    Discover the perfect brew for your moment
+                    Explore our menu and discover the perfect choice for your moment.
                 </Heading>
                 {isLoading ? (
                     <Loader />

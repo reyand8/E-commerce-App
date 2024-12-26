@@ -5,7 +5,9 @@ export interface ICat {
 	text: string;
 }
 
+export type ICatArray = ICat[];
+
 export interface ICatSorting {
-	sortData: ICat[];
+	sortData: ICatArray;
 	setSortCat: Dispatch<SetStateAction<ICat>>;
 }
