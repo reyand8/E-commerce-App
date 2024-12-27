@@ -71,6 +71,10 @@ const Cart: FC = () => {
 						<Button
 							onClick={ showModalWindow }
 							colorScheme='whatsapp'
+							sx={{
+								outline: '2px solid #01573f',
+							}}
+							color='#01573f'
 							hidden={total === 0}>
 							Checkout
 						</Button>
