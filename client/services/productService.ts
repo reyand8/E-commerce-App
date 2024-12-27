@@ -7,6 +7,15 @@ import {axiosBase} from '@/api/api';
 
 const PRODUCTS: string = '/products';
 
+/**
+ * Service for interacting with product-related API endpoints.
+ *
+ * - `getProducts`: Fetches a list of products, optionally sorted by a specific type and filtered by category IDs.
+ * - `bySearchString`: Searches for products by a given search string.
+ * - `byId`: Retrieves a specific product by its ID.
+ * - `bySlug`: Retrieves a product by its slug (URL-friendly name).
+ * - `getRelatives`: Fetches related products for a given category ID.
+ */
 export const ProductService = {
     async getProducts(type?: EnumSorting, categoryIds?: number[]): Promise<IProduct[]> {
         const params: any = {

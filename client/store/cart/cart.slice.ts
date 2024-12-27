@@ -7,6 +7,16 @@ const initialState: ICartInitialState = {
     items: [],
 };
 
+/**
+ * Redux slice for managing the shopping cart.
+ *
+ * The `cartSlice` contains the following actions:
+ *
+ * - `addToCart`: Adds a product to the cart if it does not already exist with the same size and product ID.
+ * - `removeFromCart`: Removes a product from the cart by its ID.
+ * - `changeQuantity`: Increases or decreases the quantity of a product in the cart by its ID.
+ * - `resetCart`: Clears all items in the cart.
+ */
 export const cartSlice = createSlice({
     name: 'cart',
     initialState,

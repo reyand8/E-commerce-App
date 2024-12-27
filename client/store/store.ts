@@ -12,6 +12,13 @@ import { cartSlice } from '@/store/cart/cart.slice';
 import { carouselSlice } from '@/store/carousel/carousel.slice';
 
 
+/**
+ * Redux store configuration with persistence using redux-persist.
+ *
+ * - `rootReducer` combines the `cart` and `carousel` reducers.
+ * - Only the `cart` slice is persisted using `redux-persist`.
+ * - Middleware is configured to handle persistence-related actions.
+ */
 const rootReducer = combineReducers({
     cart: cartSlice.reducer,
     carousel: carouselSlice.reducer,

@@ -9,6 +9,15 @@ const initialState: ICarouselInitialState = {
     'All food': 0,
 };
 
+/**
+ * Redux slice for managing carousel state.
+ *
+ * The `carouselSlice` contains the following actions:
+ *
+ * - `nextSlide`: Moves the carousel to the next slide, based on the current `carouselId` and its `carouselLength`.
+ * - `prevSlide`: Moves the carousel to the previous slide, based on the current `carouselId`.
+ * - `selectSlide`: Sets the carousel to a specific slide based on the given `carouselId` and `index`.
+ */
 export const carouselSlice = createSlice({
     name: 'carousel',
     initialState,

@@ -13,6 +13,14 @@ import snowflakeImg from '@/public/images/snowflake.png';
 
 const queryClient: QueryClient = new QueryClient();
 
+
+/**
+ * Main App component for the application.
+ *
+ * This component wraps the entire app with necessary providers for state management, API handling, and UI styling.
+ * It also initializes snowfall effects for visual enhancement. The main logic involves setting up the query client,
+ * Redux store, persisting the state, and applying Chakra UI for design consistency.
+ */
 export default function App({ Component, pageProps }: AppProps) {
     const [snowflakeImage, setSnowflakeImage] = useState<HTMLImageElement | null>(null);
 
