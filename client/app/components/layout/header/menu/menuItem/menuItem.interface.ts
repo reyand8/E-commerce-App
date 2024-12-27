@@ -4,6 +4,5 @@ export interface IMenuLink {
 }
 
 export interface IMenuItem {
-	key: string;
 	item: IMenuLink;
 }

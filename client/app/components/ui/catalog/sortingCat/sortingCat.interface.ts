@@ -9,5 +9,5 @@ export type ICatArray = ICat[];
 
 export interface ICatSorting {
 	sortData: ICatArray;
-	setSortCat: Dispatch<SetStateAction<ICat>>;
+	setSortCat: Dispatch<SetStateAction<ICat | undefined>>;
 }

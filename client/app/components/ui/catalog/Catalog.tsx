@@ -13,7 +13,7 @@ export const Catalog: FC<{ products: IProduct[]; cat: string; relative?: boolean
 			<div className={styles.category}>
 				{
 					relative
-						? <span>Relative Products</span>
+						? <span>Related Products</span>
 						: <span>{cat}</span>
 				}
 			</div>

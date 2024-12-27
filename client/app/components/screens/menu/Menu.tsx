@@ -16,7 +16,7 @@ import {ICat} from '@/components/ui/catalog/sortingCat/sortingCat.interface';
 
 const Menu: FC<{page: string}> = ({page}) => {
     const sortType: EnumSorting = EnumSorting.NEWEST;
-    const [sortCat, setSortCat] = useState<ICat>();
+    const [sortCat, setSortCat] = useState<ICat | undefined>(undefined);
     const [ allCat, setAllCat ] = useState<number[]>([]);
     const [ allFilteredMenu, setAllFilteredMenu ] = useState<IProduct[]>([]);
 
@@ -64,7 +64,7 @@ const Menu: FC<{page: string}> = ({page}) => {
                 ) : (
                     <>
                         <SortingCat sortData={categories} setSortCat={setSortCat}/>
-                        <Catalog products={allFilteredMenu} cat={'Menu'} />
+                        <Catalog products={allFilteredMenu} cat={'All food'} />
                     </>
                 )}
             </Layout>
