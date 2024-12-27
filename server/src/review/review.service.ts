@@ -6,6 +6,17 @@ import { CreateReviewDto } from './dto/createReview.dto';
 import { UpdateReviewDto } from './dto/updateReview.dto';
 
 
+/**
+ * Service for handling review-related operations.
+ *
+ * The `ReviewService` provides methods to:
+ * - `findAll()`: Retrieve all reviews, ordered by creation date (descending).
+ * - `findById(id: number)`: Retrieve a review by its ID.
+ * - `getAverageReviewRatingByProductId(productId: number)`: Calculate the average rating for a product based on reviews.
+ * - `create(createReviewDto: CreateReviewDto)`: Create a new review for a product, ensuring the product exists.
+ * - `update(id: number, updateReviewDto: UpdateReviewDto)`: Update an existing review by ID.
+ * - `remove(id: number)`: Delete a review by ID.
+ */
 @Injectable()
 export class ReviewService {
 	constructor(private prisma: PrismaService) {}

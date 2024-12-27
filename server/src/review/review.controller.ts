@@ -6,6 +6,17 @@ import { CreateReviewDto } from './dto/createReview.dto';
 import { UpdateReviewDto } from './dto/updateReview.dto';
 
 
+/**
+ * Controller for handling review-related API requests.
+ *
+ * The `ReviewController` provides the following routes:
+ *
+ * - `POST /reviews`: Create a new review for a product.
+ * - `GET /reviews`: Retrieve all reviews, ordered by creation date (desc).
+ * - `GET /reviews/:id`: Retrieve a specific review by ID.
+ * - `PATCH /reviews/:id`: Update an existing review by ID.
+ * - `DELETE /reviews/:id`: Delete a review by ID.
+ */
 @Controller('reviews')
 export class ReviewController {
 	constructor(private readonly reviewService: ReviewService) {}

@@ -1,13 +1,28 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
-import { Product } from '@prisma/client';
 
+import { Product } from '@prisma/client';
 import { PrismaService } from '../prisma.service';
 import { sortType } from './types/sortType';
 import { CreateProductDto } from './dto/createProduct.dto';
 import { UpdateProductDto } from './dto/updateProduct.dto';
 import { ReviewService } from '../review/review.service';
 
+type OrderByType =
+	| { price: 'asc' | 'desc' }
+	| { createdAt: 'asc' | 'desc' };
 
+/**
+ * Service for managing products and their related operations.
+ *
+ * This service provides methods for:
+ * - Retrieving a list of products with optional filters, sorting, and pagination.
+ * - Creating a new product.
+ * - Updating an existing product.
+ * - Deleting a product by its ID.
+ * - Searching products by a search string in their name or description.
+ * - Fetching a single product by its ID or slug.
+ * - Fetching related products based on a category ID.
+ */
 @Injectable()
 export class ProductService {
 	constructor(
@@ -31,9 +46,9 @@ export class ProductService {
 			type === 'high-to-low' || type === 'low-to-high';
 		const isAsc: boolean =
 			type === 'oldest' || type === 'low-to-high';
-		const orderBy: {[p: string]: string} = {
-			[isSortByPrice ? 'price' : 'createdAt']: isAsc ? 'asc' : 'desc',
-		};
+		const orderBy: OrderByType = isSortByPrice
+			? { price: isAsc ? 'asc' : 'desc' }
+			: { createdAt: isAsc ? 'asc' : 'desc' };
 		const catCondition = categoryIds && categoryIds.length > 0
 			? { categoryId: { in: categoryIds } }
 			: {};
