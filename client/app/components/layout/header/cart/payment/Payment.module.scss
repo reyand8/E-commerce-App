@@ -1,0 +1,24 @@
+.payment {
+  @apply text-xl w-[100%] h-[200px] block mb-12 rounded-xl;
+  background-color: #dae7e3;
+
+  .wrapper {
+    @apply pt-4;
+    .card {
+      @apply border border-solid border-green p-6 mx-4 mt-5 rounded-lg;
+    }
+    .label {
+      @apply text-xl p-6;
+    }
+    .pay-button {
+      @apply w-[180px] h-10 bg-green text-xl text-white m-5 border border-solid border-black;
+      border-radius: 5px;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    .payment-status {
+      @apply mt-6 w-[250px];
+    }
+  }
+}
